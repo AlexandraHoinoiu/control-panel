@@ -1,0 +1,79 @@
+.root {
+    display: flex;
+}
+
+.title {
+    flex-grow: 1;
+}
+
+.toolbar {
+    padding-right: 24px;
+}
+
+.content {
+    flex-grow: 1;
+    height: 100vh;
+    overflow: 'auto';
+}
+
+.container {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.toolbarIcon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 8px,
+}
+
+.drawerPaper {
+    width: 240px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.logo {
+    height: 50px;
+}
+
+.appBar {
+    z-index: 2;
+}
+
+.appBarShift {
+    width: 100%;
+}
+
+.MuiAppBar-colorPrimary {
+    background-color: #37a58d !important;
+}
+
+a, a:hover {
+    color: inherit !important;
+    text-decoration: none !important
+}
+
+.table {
+    width: 80% !important;
+    margin-left: 230px;
+}
+
+.contentDashboard {
+    margin-top: 100px;
+}
+
+.dropdown-menu {
+    margin-left: 200px !important;
+}
+
+.form-add-supervisors {
+    width: 30%;
+    margin-left: 40%;
+    margin-bottom: 40px;
+}
+
+.modal-content {
+    margin-top: 100px;
+}

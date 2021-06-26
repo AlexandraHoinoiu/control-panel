@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Posts from './Posts';
+import Reports from './Reports';
+import Users from './Users';
+import Supervisors from './Supervisors';
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import Login from './Login';
 
 function App() {
+  const user = JSON.parse(localStorage.getItem("user"))
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            {user ? <Posts /> : <Redirect to="/login" />}
+          </Route>
+          <Route path="/reports">
+            {user ? <Reports /> : <Redirect to="/login" />}
+          </Route>
+          <Route path="/users">
+            {user ? <Users /> : <Redirect to="/login" />}
+          </Route>
+          <Route path="/supervisors">
+            {user ? <Supervisors /> : <Redirect to="/login" />}
+          </Route>
+          <Route path="/login">
+            {user ? <Posts /> : <Login />}
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

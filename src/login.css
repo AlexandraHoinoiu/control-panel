@@ -1,0 +1,16 @@
+.Login {
+    padding: 60px 0;
+}
+
+.Login form {
+    margin: 0 auto;
+    max-width: 320px;
+}
+.login-logo{
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+body {
+    background-color: #78d89d1f;
+}
